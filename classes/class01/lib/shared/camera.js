@@ -1,15 +1,18 @@
 export default class Camera {
+
   constructor() {
-    this.video = document.createElement('video')
+    this.video = document.createElement('video');
   }
 
-  static async init() {
-    if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+  static async init () {
+
+    if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia){
       throw new Error(
-        `Browser API navigator.mediaDevices.getUserMedia not available`
-      )
+          `Browser API navigator.mediaDevices.getUserMedia not available`
+      );
     }
-    const videoConfig = {
+
+    const viewConfig = {
       audio: false,
       video: {
         width: globalThis.screen.availWidth,
@@ -19,23 +22,25 @@ export default class Camera {
         }
       }
     }
-    const stream = await navigator.mediaDevices.getUserMedia(videoConfig)
-    const camera = new Camera()
-    camera.video.srcObject = stream
-    // debug reasons!
-    // camera.video.height = 240
-    // camera.video.width = 320
-    // document.body.append(camera.video)
 
-    // aguarda pela camera!
+    const stream = await navigator.mediaDevices.getUserMedia(viewConfig);
+    const camera = new Camera();
+    camera.video.srcObject = stream;
+
+/*    camera.video.width = 320;
+    camera.video.height = 240;
+
+    document.body.append(camera.video);*/
+
+    // Aguarda pela camera
     await new Promise((resolve) => {
       camera.video.onloadedmetadata = () => {
-        resolve(camera.video)
+       resolve(camera.video);
       }
-    })
+    });
 
-    camera.video.play()
+    camera.video.play();
 
-    return camera
+    return camera;
   }
 }
