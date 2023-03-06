@@ -23,17 +23,11 @@ Marque esse projeto com uma estrela 🌟
   - [X] - Deve disparar scroll up quando usar a palma das mãos abertas 🖐
   - [X] - Deve disparar scroll down quando usar a palma das mãos fechadas ✊
   - [X] - Deve disparar click no elemento mais próximo quando usar  gesto de pinça 🤏🏻
-  - [] - Ao mover elementos na tela, deve disparar evento **:hover** em elementos em contexto
+  - [X] - Ao mover elementos na tela, deve disparar evento **:hover** em elementos em contexto
 
 - Video Player
   - [X] - Deve ser possivel de reproduzir ou pausar videos com o piscar de olhos 😁
   - [X] - Todo processamento de Machine Learning deve ser feito via Web worker
-
-### Desafios
-- [] - Aula 01 - Diferenciar piscada de olhos entre olho direito e esquerdo e atualizar log para mostrar qual olho que piscou.
-- [] - Aula 02 - Reconhecer gestos de mãos individuais e printar no log
-- [] - Aula 03 - A definir
-- [] - Aula 04 - A definir
 
 ### Considerações
 - Tire suas dúvidas sobre os desafios em nossa comunidade, o objetivo é você aprender de forma divertida. Surgiu dúvidas? Pergunte por lá!
@@ -42,3 +36,6 @@ Marque esse projeto com uma estrela 🌟
 
 ### Créditos ao Layout
 - Interface baseada no projeto [Streaming Service](https://codepen.io/Gunnarhawk/pen/vYJEwoM) de [gunnarhawk](https://github.com/Gunnarhawk)
+
+### Live demo
+[Link da demo](https://ferrorenan.github.io/semana-javascript-expert07/classes/class04/pages/titles/)

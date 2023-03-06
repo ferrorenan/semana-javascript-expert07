@@ -6,7 +6,7 @@ export default class Controller {
   #blinkCounter = 0;
 
   constructor({
-    view, worker, camera,
+    view, worker, camera
   }) {
     this.#view = view;
     this.#camera = camera;
